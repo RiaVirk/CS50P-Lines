@@ -1,12 +1,12 @@
 import sys
 
-if len(sys.agrv) == 2:
+if len(sys.argv) == 2:
     if sys.argv[1][-2] == "py":
         try:
             with open(sys.argv[1]) as file:
                 nlines = 0
                 for line in file:
-                    if not line.lstrip().startswith("#") and line.lstrip() != '':
+                    if not line.lstrip().startswith("#") and line.lstrip() != "":
                         nlines += 1
             
             print(nlines)
